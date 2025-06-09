@@ -1,0 +1,231 @@
+body {
+  background-color: whitesmoke;
+  padding: 0px;
+  font-size: 10px;
+  margin: 0px;
+}
+
+.arrow {
+  opacity: 0.8rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 0rem;
+}
+
+.logo {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 0.2rem solid black;
+  float: inline-start;
+}
+
+.nav {
+  width: 100%;
+  height: 8.5rem;
+  background-color: chocolate;
+}
+
+.heading {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 4rem;
+  color: blue;
+  /* text-align:center; */
+  margin: 0rem;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+  justify-self: center;
+  text-decoration: underline;
+  background-color: beige;
+  width: fit-content;
+  padding: 1rem;
+  border: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 2rem blue;
+}
+
+.list {
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+  float: inline-end;
+  margin-top: -4rem;
+  margin-right: 1rem;
+}
+
+ul li {
+  display: inline-block;
+  margin-left: 2rem;
+  padding: 0.5rem;
+  border-style: groove;
+  border-color: black;
+}
+
+.dropdown a {
+  display: none;
+}
+
+ul li .dropdown {
+  position: absolute;
+}
+
+ul li:hover .dropdown a {
+  display: block;
+  padding: 0.3rem;
+}
+
+li {
+  color: black;
+  background-color: darkgrey;
+}
+
+li:hover {
+  background-color: yellow;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  background-color: bisque;
+  border: 0.1rem solid whitesmoke;
+  opacity: 0.8;
+  padding: 0px;
+}
+
+a:hover {
+  background-color: lightblue;
+  color: black;
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+/* intro */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+.wel {
+  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+  margin: 2rem;
+}
+
+.about {
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  padding: 0rem 2rem;
+  text-align: center;
+}
+
+/* animes */
+.container {
+  /* padding: 0.5rem; */
+  margin: 8rem 0rem;
+}
+
+/* head */
+.anime-img {
+  width: 50rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem black;
+  border: 0.2rem solid white;
+}
+
+.anime-img:hover {
+  box-shadow: 0.5rem 0.5rem 1rem black;
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+}
+
+.description {
+  font-size: 1.6rem;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  padding: 2rem;
+  text-align: start;
+}
+
+.head {
+  height: 30rem;
+  background-color: beige;
+  border-radius: 1rem;
+  pad: 2rem 0rem;
+  margin: 1rem 0rem;
+  border: 0.1rem solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+/* charecters */
+.charecter {
+  width: 9rem;
+  height: 13rem;
+  margin: 0rem;
+}
+
+.info:hover {
+  box-shadow: 0.5rem 0.5rem 2rem yellow;
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+}
+
+.charecter:hover {
+  box-shadow: 0.5rem 0.5rem 2rem yellow;
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  text-decoration: line-through;
+  text-decoration-color: black;
+  color: crimson;
+  background-color: whitesmoke;
+  width: 8rem;
+  text-align: center;
+  padding: 0.2rem;
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  margin: 0rem;
+}
+
+.charecters {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  width: 90%;
+  height: fit-content;
+  /* background-color: black; */
+  display: flex;
+  padding: 0.5rem 2rem;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-self: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2rem;
+  background-color: white;
+  margin: 0rem;
+}

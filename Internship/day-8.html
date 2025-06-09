@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-8</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        color: #222;
+      }
+      h1 {
+        color: #2d6cdf;
+        margin-bottom: 18px;
+        letter-spacing: 1px;
+        font-size: 2rem;
+        text-shadow: 0 2px 8px rgba(45, 108, 223, 0.10), 0 1px 0 #fff;
+      }
+      .container {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 30px 25px;
+        background: #f9f9f9;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 1.5px 8px rgba(45,108,223,0.06);
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 1rem;
+        color: #222;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        text-shadow: 0 1px 2px rgba(45,108,223,0.06);
+      }
+      input[type="number"] {
+        width: 100%;
+        padding: 8px 10px;
+        margin-bottom: 18px;
+        border: 1px solid #b3c6e0;
+        border-radius: 6px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: border 0.2s, box-shadow 0.2s;
+        box-shadow: 0 1px 4px rgba(45,108,223,0.07);
+      }
+      input[type="number"]:focus {
+        border: 1.5px solid #2d6cdf;
+        outline: none;
+        background: #f0f6ff;
+        box-shadow: 0 2px 8px rgba(45,108,223,0.13);
+      }
+      button {
+        background: #2d6cdf;
+        color: #fff;
+        border: none;
+        padding: 10px 28px;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, box-shadow 0.2s;
+        margin-top: 10px;
+        box-shadow: 0 2px 8px rgba(45,108,223,0.13);
+      }
+      button:hover {
+        background: #174ea6;
+        box-shadow: 0 4px 16px rgba(23,78,166,0.18);
+      }
+      h2 {
+        font-size: 1.1rem;
+        margin: 18px 0 10px 0;
+        color: #174ea6;
+        text-shadow: 0 1px 3px rgba(23,78,166,0.08);
+      }
+      #result, #amst {
+        font-size: 1.05rem;
+        color: #333;
+        background: #eaf1fb;
+        padding: 8px 12px;
+        border-radius: 5px;
+        margin: 8px 0 0 0;
+        display: inline-block;
+        min-width: 120px;
+        box-shadow: 0 1.5px 6px rgba(45,108,223,0.10);
+      }
+      hr {
+        border: none;
+        border-top: 2px solid #b3c6e0;
+        margin: 40px 0;
+        width: 80%;
+        box-shadow: 0 2px 8px rgba(45,108,223,0.07);
+      }
+      @media (max-width: 500px) {
+        .container {
+          max-width: 95vw;
+          padding: 18px 8px;
+        }
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>Finding Prime Numbers Between 2 values</h1></center>
+    <div class="container">
+      <label for="val1">Enter First value:</label
+      ><input type="number" id="val1" /><br />
+      <label for="val2">Enter Second value:</label
+      ><input type="number" id="val2" /><br />
+      <h2>
+        Result:
+        <p id="result">0</p>
+      </h2>
+      <button onclick="prime()">Submit</button>
+    </div>
+    <br /><br /><br /><br /><br />
+    <hr />
+    <br /><br /><br /><br /><br />
+    <center>
+      <h1>Finding wheather the given number is amstrong or not</h1>
+    </center>
+    <div class="container">
+      <label for="val1">Enter value:</label
+      ><input type="number" id="val" /><br />
+
+      <h2>
+        Result:
+        <p id="amst">0</p>
+      </h2>
+      <button onclick="Amstrong()">Submit</button>
+    </div>
+    <script>
+      function prime() {
+        var num1 = parseInt(document.getElementById("val1").value);
+        console.log(num1);
+        var num2 = parseInt(document.getElementById("val2").value);
+        console.log(num2);
+
+        var primestore = "";
+        if (num1 == 0 || num2 == 0 || num1 == 1 || num2 == 1) {
+          alert("!invalid input!! Enter number greater than 0 and 1");
+          console.log("works");
+        } else {
+          for (var i = num1; i <= num2; i++) {
+            var count = 0;
+            for (var j = 2; j <= i; j++) {
+              if (i % j == 0) {
+                count++;
+              }
+            }
+            if (count == 1) {
+              primestore += i + ", ";
+            }
+          }
+          console.log("prime store value is", primestore);
+          document.getElementById("result").textContent =
+            "The prime numbers between " +
+            num1 +
+            " and " +
+            num2 +
+            " are " +
+            primestore;
+        }
+      }
+
+      function Amstrong() {
+        var num = parseInt(document.getElementById("val").value);
+        if (num < 0) {
+          alert("!Invalid input!! Enter a positive number");
+        } else {
+          console.log(num);
+          var sum = 0;
+          var temp = num;
+          var digits = 0;
+          var tempDigits = num;
+          while (tempDigits > 0) {
+            tempDigits = Math.floor(tempDigits / 10);
+            digits++;
+          }
+          while (temp > 0) {
+            var digit = temp % 10;
+            var power = 1;
+            for (var i = 0; i < digits; i++) {
+              power *= digit;
+            }
+            sum += power;
+            temp = Math.floor(temp / 10);
+          }
+          if (sum === num) {
+            document.getElementById("amst").textContent =
+              num + " is an Armstrong number.";
+          } else {
+            document.getElementById("amst").textContent =
+              num + " is NOT an Armstrong number.";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

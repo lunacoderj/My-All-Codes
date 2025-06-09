@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 100px;
+        height: 20px;
+        background-color: aqua;
+        border-radius: 50% 50% 0% 0%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+      .box2 {
+        width: 90px;
+        height: 20px;
+        background-color: antiquewhite;
+        border-radius: 50% 50% 0% 0%;
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+      .box3 {
+        width: 70px;
+        height: 20px;
+        background-color: orchid;
+        border-radius: 50% 50% 0% 0%;
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+      .box4 {
+        width: 6px;
+        height: 40px;
+        background-color: blue;
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -3;
+      }
+      .box5 {
+        width: 2px;
+        height: 8px;
+        background-color: yellow;
+        border: 0.1px dotted red;
+        border-radius: 50% 50% 0% 0%;
+        position: absolute;
+        top: 40.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -4;
+      }
+      .box6{
+        width: 140px;
+        height: 15px;
+        background-color: orange;
+        border-radius: 50% 50% 10% 10%;
+        position: absolute;
+        top: 51.5%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Factorial number</h1>
+    <p>Click 👇 button for knowing a fatorial of any number</p>
+    <button onclick="fact()">Factorial</button>
+    <h1>Prime number</h1>
+    <p>Click 👇 button for knowing wheather the number is prime or not</p>
+    <button onclick="prime()">Prime</button>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <script src="./javascript/hello.js"></script>
+  </body>
+</html>

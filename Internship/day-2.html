@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table&Lists</title>
+    <style>
+      td,
+      th {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+      }
+
+      th {
+        background-color: yellow;
+      }
+
+      td {
+        background-color: lightgreen;
+      }
+      td:hover{
+        background-color: whitesmoke;
+        color: red;
+      }
+
+      th:hover{
+        background-color: white;
+        color: blue;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+      }
+
+      li{
+        line-height: 25px;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 5px;
+      }
+
+      ul{
+        margin-bottom: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 style="justify-self: center">Tables</h1>
+    <table>
+      <tr>
+        <th rowspan="2">days\periods</th>
+        <th>1</th>
+        <th>2</th>
+        <th rowspan="2">10:50 to 11:00</th>
+        <th>3</th>
+        <th>4</th>
+        <th rowspan="2">12:40 to 1:40</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+      </tr>
+      <tr>
+        <th>9:10 to 10:00</th>
+        <th>10:00 to 10:50</th>
+        <th>11:00 to 11:50</th>
+        <th>11:50 to 12:40</th>
+        <th>1:40 to 2:30</th>
+        <th>2:30 to 3:20</th>
+        <th>3:20 to 4:10</th>
+        <th>4:10 to 5:00</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>english</td>
+        <td>maths</td>
+        <td rowspan="11" style="background-color: azure;">B<br />R<br />E<br />A<br />K</td>
+        <td>social</td>
+        <td>hindi</td>
+        <td rowspan="11" style="background-color: azure;">B<br />R<br />E<br />A<br />K</td>
+        <td>telugu</td>
+        <td>science</td>
+        <td>social</td>
+        <td>games</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>social</td>
+        <td>hindi</td>
+        <td>telugu</td>
+        <td>science</td>
+        <td>science</td>
+        <td>hiii</td>
+        <td>hiii</td>
+        <td>hiii</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>telugu</td>
+        <td>science</td>
+        <td>telugu</td>
+        <td>telugu</td>
+        <td>telugu</td>
+        <td>telugu</td>
+        <td>hindi</td>
+        <td>gfyftyt</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td colspan="2" style="background-color: cadetblue;">science</td>
+        <td>science</td>
+        <td>science</td>
+        <td>hindi</td>
+        <td>telugu</td>
+        <td colspan="2" style="background-color: skyblue;">social</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>etl</td>
+        <td>science</td>
+        <td>hindi</td>
+        <td>telugu</td>
+        <td>science</td>
+        <td>science</td>
+        <td>science</td>
+        <td>science</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>hindi</td>
+        <td>telugu</td>
+        <td>science</td>
+        <td>social</td>
+        <td colspan="4" style="background-color: wheat;">games</td>
+      </tr>
+    </table>
+
+    <hr style="margin-top: 100px;">
+    <h1 style="margin-top: 100px;">LISTS</h1>
+    <ol>
+      <li>
+        BIRIYANIS
+        <ul>
+          <li>Chicken Biriyani</li>
+          <li>Mutton Biriyani</li>
+          <li>Egg Biriyani</li>
+          <li>Veg Biriyani</li>
+          <li>Paneer Biriyani</li>
+        </ul>
+      </li>
+      <li>
+        STARTERS
+        <ul>
+          <li>Chilli Chicken</li>
+          <li>Chicken 65</li>
+          <li>Pepper Chicken</li>
+          <li>Paneer 65</li>
+          <li>Veg Manchurian</li>
+          <li>Chicken Manchurian</li>
+        </ul>
+      </li>
+      <li>
+        KEBABS
+        <ul>
+          <li>Chicken Tikka Kebab</li>
+          <li>Tandoori Chicken(Half)</li>
+          <li>Tandoori Chicken(Full)</li>
+          <li>Chicken Reshmi Kebab</li>
+          <li>Chicken Garlic Kebab</li>
+        </ul>
+      </li>
+      <li>
+        CURRIES
+        <ul>
+          <li>Butter Chicken Bineless</li>
+          <li>Nizami Handi</li>
+        </ul>
+      </li>
+      <li>
+        INDIAN BREADS
+        <ul>
+          <li>Tandoori Roti</li>
+          <li>Rumali Roti</li>
+        </ul>
+      </li>
+      <li>
+        DESERTS
+        <ul>
+          <li>Qubani Ka Meetha 250 Gms</li>
+          <li>Double Ka Mettha</li>
+        </ul>
+      </li>
+      <li>
+        BEVERAGES
+        <ul>
+          <li>Soft Drinks</li>
+          <li>Fruit Juices</li>
+          <li>Water Bottles</li>
+          <li>Ice Cream</li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>

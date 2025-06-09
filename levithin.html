@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #star {
+        font-size: 64px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="star">⭐</div>
+    <script>
+      const x = document.getElementById("star");
+      x.style.position = "absolute";
+      x.style.left = "0px"; 
+      document.addEventListener("keydown", move);
+      function move(e) {
+        console.log("Key pressed:", e.code);
+        if (e.code === "ArrowRight") {
+          let currentLeft = parseInt(x.style.left, 10) || 0;
+          x.style.left = currentLeft + 100 + "px";
+          console.log("Moved right to:", x.style.left);
+        } else if (e.code === "ArrowLeft") {
+          let currentLeft = parseInt(x.style.left, 10) || 0;
+          x.style.left = currentLeft - 100 + "px";
+          console.log("Moved left to:", x.style.left);
+          console.log("fail");
+        }
+        else if (e.code === "ArrowUp") {
+          let currentTop = parseInt(x.style.top, 10) || 0;
+          x.style.top = currentTop - 100 + "px";
+          console.log("Moved up to:", x.style.top);
+        } else if (e.code === "ArrowDown") {
+          let currentTop = parseInt(x.style.top, 10) || 0;
+          x.style.top = currentTop + 100 + "px";
+          console.log("Moved down to:", x.style.top);
+        }
+        else if (e.code === "KeyR") {
+          x.style.left = "0px";
+          x.style.top = "100px";
+          console.log("Reset position to:", x.style.left, x.style.top);
+        }
+      }
+
+
+      //       document.addEventListener(
+      //         "keydown",
+      //         (e) =>
+      //           (document.body.innerHTML = `<div>e.code:
+      //  ➥ ${e.code}</div><h1>e.key: ${e.key}</h1>`)
+      //       );
+      //       //
+      //       document.addEventListener("mousemove", show);
+      //       function show(event) {
+      //         document.body.textContent = `(${event.x},${event.y})`;
+      //       }
+      //       //
+      //       const bomb = document.createElement("div");
+      //       bomb.textContent = "💣";
+      //       bomb.style.position = "absolute";
+      //       bomb.style.top = Math.floor(200 * Math.random()) + "px";
+      //       bomb.style.left = Math.floor(200 * Math.random()) + "px";
+      //       bomb.style.fontSize = "64px";
+      //       document.body.appendChild(bomb);
+
+      //       bomb.addEventListener("mouseover", (e) => {
+      //         document.body.style.background = "red";
+      //         document.body.innerHTML = "<h1>BOOOOOOM!!!</h1>";
+      //       });
+      //       //
+
+      // const star = document.querySelector("#star");
+
+      // star.addEventListener("mousedown", start);
+      // star.addEventListener("mouseup", stop);
+
+      // function start(e) {
+      //   document.addEventListener("mousemove", move);
+      // }
+
+      // function move(e) {
+      //   star.style.left = `${e.x}px`;
+      //   star.style.top = `${e.y}px`;
+      // }
+
+      // document.addEventListener("mousemove", move);
+
+      // function stop() {
+      //   document.removeEventListener("mousemove", move);
+      // }
+    </script>
+  </body>
+</html>

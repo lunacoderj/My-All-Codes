@@ -1,0 +1,296 @@
+:root {
+  /* Primary Palette */
+  --primary-color: #2e8b57; /* Elegant green (Sea Green) */
+  --secondary-color: #6b8e23; /* Olive Drab */
+  --optional-color: #ffd700; /* Gold */
+  --extra-color: #4682b4; /* Steel Blue */
+
+  /* Text Colors */
+  --text-color: #234236; /* Deep forest green */
+  --text-passive: #6d8b74; /* Muted green */
+  --text-active: #14532d; /* Darker green */
+
+  /* Border Colors */
+  --border-color: #a3b18a; /* Sage */
+  --border-hover: #52734d; /* Dark sage */
+  --border-active: #2c5f2d; /* Deep green */
+
+  /* Backgrounds */
+  --background-color: #f5fff7; /* Very light green */
+  --background-alt: #e3f6e8; /* Soft green */
+  --background-hover: #d0e7c6; /* Hover background */
+  --background-active: #b7d7b0; /* Active background */
+
+  /* Box Shadows */
+  --box-shadow: 0 2px 8px 0 rgba(46, 139, 87, 0.15); /* Subtle green shadow */
+  --box-shadow-hover: 0 4px 16px 0 rgba(46, 139, 87, 0.25);
+
+  /* Drop Shadows */
+  --drop-shadow: drop-shadow(0 2px 4px rgba(46, 139, 87, 0.15));
+  --drop-shadow-hover: drop-shadow(0 4px 8px rgba(46, 139, 87, 0.25));
+
+  /* Hover, Before, After, Passive, Active */
+  --hover-color: #c1e1c1; /* Light green for hover */
+  --before-color: #b4d9b4; /* For ::before pseudo-element */
+  --after-color: #a7c7a7; /* For ::after pseudo-element */
+  --passive-color: #eaf6ea; /* Passive/disabled state */
+  --active-color: #388e3c; /* Active/selected state */
+
+  /* Font Families */
+  --font-family: Georgia, "Times New Roman", Times, serif;
+  --font-heading: "Playfair Display", Georgia, serif; /* Headings */
+  --font-description: "Lora", Georgia, serif; /* Descriptions */
+  --font-normal: "Georgia", "Times New Roman", Times, serif; /* Normal text */
+  --font-explanation: "Merriweather", serif; /* Explanations */
+  --font-article: "Libre Baskerville", serif; /* Articles */
+  --font-image-name: "Fira Sans", Arial, sans-serif; /* Image naming */
+  --font-family: Georgia;
+}
+body {
+  background-color: var(--background-alt);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0px;
+  padding: 0px;
+  font-size: 10px;
+}
+/* Navbar */
+nav {
+  background-color: var(--optional-color);
+  color: white;
+  padding: 0.5rem;
+  margin: 0rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 0px 0px 1rem 1rem;
+  box-shadow: 0px 1px rgb(45, 45, 45) inset;
+}
+.icon-pair {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  width: 8rem;
+  border-radius: 1rem;
+}
+.title {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0rem;
+}
+.nav-list ul {
+  display: flex;
+  margin-top: 1.5rem;
+}
+.nav-list ul li a {
+  margin-right: 1rem;
+  align-content: center;
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border: 0.2rem solid var(--border-color);
+  transition: background-color 0.3s ease-in-out;
+}
+.nav-list ul li a:hover {
+  background-color: var(--primary-color);
+  color: var(--before-color);
+  border: 0.2rem solid var(--text-color);
+  border-radius: 0.5rem;
+}
+.nav-list ul li a.active,
+.nav-list ul li a:focus {
+  background-color: var(--active-color);
+  color: #fff;
+  border: 0.2rem solid var(--border-active);
+  border-radius: 0.5rem;
+  outline: none;
+  text-decoration: underline;
+}
+/* Main Section Styles */
+main {
+  margin: 2rem auto;
+  padding: 1rem;
+  background: var(--background-color);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+/* Intro Section */
+.intro {
+  background-image: url(./Body.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow-hover);
+}
+.intro h1,
+.intro p {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+#about {
+  background: var(--background-hover);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.q {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-top: 1.5rem;
+}
+.ans {
+  font-family: var(--font-description);
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Types Section */
+.types {
+  background: var(--background-alt);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.type {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--extra-color);
+  margin-top: 1.2rem;
+}
+.type-ans {
+  font-family: var(--font-explanation);
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+.types ul {
+  margin: 0 0 1rem 1.5rem;
+  padding: 0;
+}
+.types li {
+  margin-bottom: 0.3rem;
+}
+.types table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+.types th,
+.types td {
+  border: 1px solid var(--border-color);
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-size: 1.4rem;
+}
+td:hover{
+  background-color: var(--border-color
+  );;
+}
+.types th {
+  background: var(--background-hover);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.types caption {
+  caption-side: top;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+/* Importance Section */
+.importance {
+  background: var(--background-hover);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+.description {
+  font-family: var(--font-description);
+  font-size: 1.6rem;
+  color: var(--text-passive);
+  margin-bottom: 1rem;
+}
+.des-list {
+  margin: 0 0 1rem 1.5rem;
+  padding: 0;
+}
+.list {
+  font-family: var(--font-normal);
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+/* Threats Section */
+.threats {
+  background: var(--background-alt);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  main {
+    padding: 0.5rem;
+  }
+  .intro,
+  #about,
+  .types,
+  .importance,
+  .threats {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  .icon {
+    width: 4rem;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .q {
+    font-size: 1.1rem;
+  }
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utility: Remove default table caption margin */
+caption {
+  margin-bottom: 0;
+}

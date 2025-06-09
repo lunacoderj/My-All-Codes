@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+      }
+      .container {
+        justify-self: center;
+        background-color: aliceblue;
+        width: 280px;
+      }
+      #window {
+        width: 80%;
+        height: 25px;
+        padding: 10px;
+        margin: 10px 20px;
+        font-size: 24px;
+        text-align: right;
+        border: none;
+        background: #000;
+        color: #0f0;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      button {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        background-color: azure;
+        border: 0.5px inset black;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      button:hover {
+        background-color: chocolate;
+        cursor: pointer;
+        border: 5px groove;
+      }
+      button:active {
+        background-color: orange;
+        border: 5px ridge;
+        transform: scale(0.8);
+      }
+      .digits {
+        width: 200px;
+        gap: 8px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .align {
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+      }
+      .operators {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      #n {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        background-color: azure;
+        border: 0.5px inset black;
+      }
+      #n:hover {
+        background-color: chocolate;
+        cursor: pointer;
+        border: 5px groove;
+      }
+      #n:active {
+        background-color: orange;
+        border: 5px ridge;
+        transform: scale(0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Caculator</h1>
+    </center>
+    <div class="container">
+      <input type="text" id="window" />
+      <div class="align">
+        <div class="digits">
+          <button id="num" onclick="getval(1)">1</button>
+          <button id="num" onclick="getval(2)">2</button>
+          <button id="num" onclick="getval(3)">3</button>
+          <button id="num" onclick="getval(4)">4</button>
+          <button id="num" onclick="getval(5)">5</button>
+          <button id="num" onclick="getval(6)">6</button>
+          <button id="num" onclick="getval(7)">7</button>
+          <button id="num" onclick="getval(8)">8</button>
+          <button id="num" onclick="getval(9)">9</button>
+          <button id="num" onclick="getval('.')">.</button>
+          <button id="num" onclick="getval(0)">0</button>
+          <button id="clean" onclick="clearInput()">🗑️</button>
+        </div>
+        <div class="operators">
+          <button id="n" onclick="getval('+')">+</button>
+          <button id="n" onclick="getval('-')">-</button>
+          <button id="n" onclick="getval('*')">*</button>
+          <button id="n" onclick="getval('/')">/</button>
+          <button id="n" onclick="result()">=</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      var digit, output, value;
+      function getval(option) {
+        digit = option;
+        console.log("Got digit is ", digit);
+        document.getElementById("window").value += digit;
+      }
+      function result() {
+        try {
+          output = document.getElementById("window").value;
+          value = Function(`return ${output}`)();
+          document.getElementById("window").value = value;
+        } catch (error) {
+          document.getElementById("window").value = "Error";
+        }
+      }
+
+      function clearInput() {
+        digit = 0;
+        output = 0;
+        value = 0;
+        document.getElementById("window").value = "";
+        alert("clear");
+      }
+    </script>
+  </body>
+</html>

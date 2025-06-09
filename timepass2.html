@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      ul li {
+        display: inline-block;
+        position: relative;
+        width: 100px;
+        padding: 5px;
+        background-color: aliceblue;
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      ol {
+        display: none;
+        position: absolute;
+      }
+      ul li:hover ol {
+        display: block;
+        margin-top: 5px;
+        margin-left: -30px;
+      }
+
+      ol li:hover {
+        text-decoration: underline;
+        background-color: blue;
+      }
+
+      .container {
+        display: flex;
+        width: 600px;
+        height: 100px;
+        background-color: black;
+        color: black;
+      }
+
+      .container div:hover {
+        flex: 2;
+      }
+      .box1,
+      .box2,
+      .box3,
+      .box4,
+      .box5 {
+        flex: 1;
+        text-align: center;
+      }
+
+      .box1 {
+        background-color: red;
+      }
+
+      .box2 {
+        background-color: green;
+      }
+
+      .box3 {
+        background-color: blue;
+      }
+
+      .box4 {
+        background-color: yellow;
+      }
+
+      .box5 {
+        background-color: purple;
+      }
+      img{
+        width: 300px;;
+      }
+      img:hover{
+      transform: perspective(500px) rotatex(-20deg) translatey(-80px);
+      transition: transform 0.3s;
+      overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        websites
+        <ol>
+          <li>zomato</li>
+          <li>swizzy</li>
+          <li>flipcart</li>
+          <li>amazon</li>
+          <li>meesho</li>
+          <li>max</li>
+          <li>foodi</li>
+          <li>panda</li>
+          <li>shopsy</li>
+          <li>something</li>
+        </ol>
+      </li>
+      <li>
+        Applications
+        <ol>
+          <li>zomato</li>
+          <li>swizzy</li>
+          <li>flipcart</li>
+          <li>amazon</li>
+          <li>meesho</li>
+          <li>max</li>
+          <li>foodi</li>
+          <li>panda</li>
+          <li>shopsy</li>
+          <li>something</li>
+        </ol>
+      </li>
+      <li>
+        Services
+        <ol>
+          <li>zomato</li>
+          <li>swizzy</li>
+          <li>flipcart</li>
+          <li>amazon</li>
+          <li>meesho</li>
+          <li>max</li>
+          <li>foodi</li>
+          <li>panda</li>
+          <li>shopsy</li>
+          <li>something</li>
+        </ol>
+      </li>
+      <li>
+        information
+        <ol>
+          <li>zomato</li>
+          <li>swizzy</li>
+          <li>flipcart</li>
+          <li>amazon</li>
+          <li>meesho</li>
+          <li>max</li>
+          <li>foodi</li>
+          <li>panda</li>
+          <li>shopsy</li>
+          <li>something</li>
+        </ol>
+      </li>
+      <li>
+        works
+        <ol>
+          <li>zomato</li>
+          <li>swizzy</li>
+          <li>flipcart</li>
+          <li>amazon</li>
+          <li>meesho</li>
+          <li>max</li>
+          <li>foodi</li>
+          <li>panda</li>
+          <li>shopsy</li>
+          <li>something</li>
+        </ol>
+      </li>
+    </ul>
+
+    <div class="container">
+      <div class="box1">BOX1</div>
+      <div class="box2">BOX2</div>
+      <div class="box3">BOX3</div>
+      <div class="box4">BOX4</div>
+      <div class="box5">BOX5</div>
+    </div>
+    <img
+      src="./Internship/images/luffy.png" 
+      alt="luffy"
+    />
+
+
+  </body>
+</html>

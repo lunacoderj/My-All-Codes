@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* DRONE */
+      .drone {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        background: whitesmoke;
+        z-index: -4;
+        transition: 3s ease-in-out;
+      }
+
+      .body {
+        width: 200px;
+        height: 220px;
+        background: linear-gradient(rgb(7, 7, 240), rgb(0, 0, 0));
+        border: 5px solid white;
+        filter: drop-shadow(5px 1px 8px yellow);
+        border-radius: 10%;
+        text-align: center;
+        align-content: center;
+        font-size: 35px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+      .l1 {
+        width: 20px;
+        height: 120px;
+        background: black;
+        position: absolute;
+        top: 24%;
+        left: 24%;
+        transform: translate(-50%, -50%);
+        rotate: 125deg;
+        z-index: -2;
+      }
+      .l2 {
+        width: 20px;
+        height: 150px;
+        background: black;
+        position: absolute;
+        top: 19%;
+        left: 72%;
+        transform: translate(-50%, -50%);
+        rotate: 225deg;
+        z-index: -2;
+      }
+      .l3 {
+        width: 20px;
+        height: 150px;
+        background: black;
+        position: absolute;
+        top: 49%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+        rotate: 225deg;
+        z-index: -2;
+      }
+      .l4 {
+        width: 20px;
+        height: 150px;
+        background: black;
+        position: absolute;
+        top: 51%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+        rotate: -230deg;
+        z-index: -2;
+      }
+      .f1 {
+        width: 15px;
+        height: 120px;
+        background: whitesmoke;
+        border: 5px solid silver;
+        border-radius: 45%;
+        position: absolute;
+        top: 23%;
+        left: 26%;
+        transform: translate(-50%, -50%);
+      }
+      .f2 {
+        width: 15px;
+        height: 120px;
+        background: whitesmoke;
+        border: 5px solid silver;
+        border-radius: 45%;
+        position: absolute;
+        top: 22%;
+        left: 71%;
+        transform: translate(-50%, -50%);
+      }
+      .f3 {
+        width: 15px;
+        height: 120px;
+        background: whitesmoke;
+        border: 5px solid silver;
+        border-radius: 45%;
+        position: absolute;
+        top: 63%;
+        left: 26%;
+        transform: translate(-50%, -50%);
+      }
+      .f4 {
+        width: 15px;
+        height: 120px;
+        background: whitesmoke;
+        border: 5px solid silver;
+        border-radius: 45%;
+        position: absolute;
+        top: 63%;
+        left: 72%;
+        transform: translate(-50%, -50%);
+      }
+      .fans {
+        animation: rotate 0.1s linear infinite;
+        box-shadow: 4px 5px 5px blue;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* CAR */
+      .car-container {
+        width: 1000px;
+        margin-top: 100px;
+        height: 10px;
+        background: rgb(0, 0, 0);
+        position: relative;
+      }
+      .car{
+        animation: move 5s infinite ease-in-out alternate;
+      }
+      .midle {
+        width: 150px;
+        height: 40px;
+        background: rgb(236, 25, 25);
+        border-radius: 30% 80% 20% 20%;
+        border: 2px solid black;
+        position: absolute;
+        bottom: 20px;
+      }
+      .top {
+        width: 120px;
+        height: 2px;
+        background: black;
+        position: absolute;
+        left: 10px;
+        bottom: 45px;
+      }
+      .back {
+        width: 2px;
+        height: 45px;
+        background: black;
+        position: absolute;
+        left: 10px;
+        bottom: 21px;
+        z-index: 2;
+      }
+      .front {
+        width: 2px;
+        height: 38px;
+        background: black;
+        position: absolute;
+        left: 90px;
+        bottom: 21px;
+        z-index: 2;
+      }
+      .middle {
+        width: 2px;
+        height: 40px;
+        background: black;
+        position: absolute;
+        left: 50px;
+        bottom: 21px;
+        z-index: 2;
+      }
+      .glass {
+        width: 120px;
+        height: 15px;
+        background: gainsboro;
+        position: absolute;
+        left: 10px;
+        bottom: 46px;
+        border: 1px solid black;
+        border-radius: 100% 1100% 30% 0%;
+        z-index: 1;
+      }
+      .light {
+        width: 10px;
+        height: 18px;
+        background: yellow;
+        position: absolute;
+        left: 140px;
+        bottom: 22px;
+        border: 1px solid black;
+        border-radius: 0% 100% 50% 0%;
+        z-index: 1;
+      }
+      .weels {
+        background: blue;
+        width: 25px;
+        height: 25px;
+        border: 2px dotted black;
+        border-radius: 50%;
+        animation: spin 5s infinite ease-in-out alternate;
+      }
+      .w1 {
+        position: absolute;
+        left: 20px;
+        bottom: 8px;
+        z-index: 2;
+      }
+      .w2 {
+        position: absolute;
+        left: 100px;
+        bottom: 8px;
+        z-index: 2;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes move {
+        from{
+          transform: translatex(0px);
+        }
+        to{
+          transform: translatex(820px);
+        }
+      }
+      /* NATURE */
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="drone">
+      <div class="body">Drone😎</div>
+      <div class="legs l1"></div>
+      <div class="legs l2"></div>
+      <div class="legs l3"></div>
+      <div class="legs l4"></div>
+      <div class="fans f1"></div>
+      <div class="fans f2"></div>
+      <div class="fans f3"></div>
+      <div class="fans f4"></div>
+    </div>
+    <div class="car-container">
+      <div class="car">
+        <div class="midle"></div>
+        <div class="top"></div>
+        <div class="front"></div>
+        <div class="back"></div>
+        <di class="middle"></di>
+        <div class="glass"></div>
+        <div class="light"></div>
+        <div class="weels w1"></div>
+        <div class="weels w2"></div>
+      </div>
+    </div>
+    <div class="nature-container">
+      <div class="land"></div>
+      <div class="grass"></div>
+      <div class="house">
+        <div class="roof r1"></div>
+        <div class="roof r2"></div>
+        <div class="wall wl1"></div>
+        <div class="wall wl2"></div>
+        <div class="wall wl3"></div>
+        <div class="wall wl4"></div>
+        <div class="door"></div>
+        <div class="door-handle"></div>
+        <div class="window"></div>
+        <div class="window line1"></div>
+        <div class="window line2"></div>
+        <div class="window line3"></div>
+        <div class="window line4"></div>
+        <div class="sun"></div>
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="cloud c3"></div>
+        <div class="tree t1"></div>
+        <div class="tree t2"></div>
+        <div class="birds b1"></div>
+        <div class="birds b2"></div>
+        <div class="birds b3"></div>
+        <div class="birds b4"></div>
+        <div class="birds b5"></div>
+      </div>
+    </div>
+  </body>
+</html>

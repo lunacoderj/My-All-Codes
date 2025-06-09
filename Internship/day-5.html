@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body
+    {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      width: fit-content;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    label[for="firstname"],
+    label[for="lastname"]{
+      display: inline-block;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form action="./day-4.html">
+    <label for="fullname">Full Name</label>
+    <br>
+    <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+    <label for="firstname">:First Name</label>
+    <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+    <label for="lastname">:lastname</label>
+    <br>
+    <label for="preferred-name">Preffered name:</label>
+    <input type="text" id="preferred-name" name="preferred-name" placeholder="Preferred Name">
+    <br>
+    <label for="gender">Gender</label>
+    <input type="radio" id="gender" name="male" value="gender">Male
+    <input type="radio" id="gender" name="male" value="gender">female
+    <br>
+    <label for="dob">Birth Date</label>
+    <input type="date" id="dob" name="dob">
+    <br>
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" min="0" max="100">
+    <br>
+    <label for="number" >Phone Number</label>
+    <input type="tel" id="number" name="number" placeholder="Phone Number" pattern="[0-9]{10}">
+    <br>
+    <label for="address">Permanent Address</label>
+    <input type="text" id="address" name="address" placeholder="Permanent Address"><br>
+    <label for="district">District</label>
+    <select name="district" id="district" required>
+      <option value="" disabled selected>Select your district</option>
+      <option value="district">Visakhapatnam</option>
+      <option value="district">vijayanagaram</option>
+      <option value="district">srikakulam</option>
+      <option value="district">hyderabad</option>
+    </select><br>
+    <label for="work">Employee</label>
+    <input type="radio" id="work" name="work" value="yes">Yes
+    <input type="radio" id="work" name="work" value="no">No
+    <br>
+    <label for="month">Select one month</label>
+    <input type="checkbox" id="month" name="month" value="month1">January
+    <input type="checkbox" id="month" name="month" value="month2">February
+    <input type="checkbox" id="month" name="month" value="month3">March
+    <input type="checkbox" id="month" name="month" value="month4">April
+    <br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    
+  </form>
+</body>
+</html>
